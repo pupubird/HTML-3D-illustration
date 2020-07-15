@@ -48,6 +48,10 @@
           node, // lookAt ({ x, y, z })
           3000 // ms transition duration
         );
+        setTimeout(() => {
+          window.open(`https://www.w3schools.com/tags/ref_byfunc.asp`);
+        }, 3000);
+        //
       });
   });
 </script>
