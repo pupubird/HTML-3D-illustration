@@ -81,6 +81,7 @@
   * {
     font-family: sans-serif;
     margin-top: 15px;
+    text-align: center;
   }
 </style>
 
