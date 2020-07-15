@@ -13,7 +13,7 @@
     graph(target)
       .graphData(data)
       .backgroundColor("#E8E9ED")
-      .linkColor(() => "black")
+      .linkColor(() => "#A8A8A8")
       .nodeThreeObject(node => {
         // use a sphere as a drag handle
         const obj = new THREE.Mesh(
