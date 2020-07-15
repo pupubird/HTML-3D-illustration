@@ -9,6 +9,7 @@
     "3d-force-graph": "^1.66.4",
     "ganalytics": "^3.0.0",
     "sirv-cli": "^0.4.0",
+    "svelte-loading-spinners": "0.0.19",
     "three-spritetext": "^1.5.1"
   },
   "devDependencies": {
