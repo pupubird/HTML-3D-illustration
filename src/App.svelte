@@ -9,6 +9,7 @@
     let data = await res.json();
 
     let graph = ForceGraph3D();
+    graph.d3Force("charge").strength(-300);
     graph(target)
       .graphData(data)
       .nodeThreeObject(node => {
