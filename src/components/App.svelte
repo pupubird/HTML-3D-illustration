@@ -78,7 +78,7 @@
     align-items: center;
     flex-direction: column;
   }
-  h1 {
+  * {
     font-family: sans-serif;
     margin-top: 15px;
   }
@@ -88,6 +88,8 @@
   <div class="loading">
     <Circle size="60" unit="px" color="#E65127" />
     <h1>3D graph loading</h1>
+    <p>Best view on desktop</p>
+    <p>You might experience performance issue on mobile device</p>
   </div>
 {/if}
 <div bind:this={target} />
