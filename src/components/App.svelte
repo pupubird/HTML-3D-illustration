@@ -1,11 +1,11 @@
 <script>
   import { onMount } from "svelte";
   import ForceGraph3D from "3d-force-graph";
-  import * as THREE from "three";
+  import { Mesh, SphereGeometry, MeshBasicMaterial } from "three";
   import SpriteText from "three-spritetext";
   let target;
   onMount(async () => {
-    let res = await fetch("/data.json");
+    let res = await fetch("/assets/data.json");
     let data = await res.json();
 
     let graph = ForceGraph3D();
@@ -16,9 +16,9 @@
       .linkColor(() => "#A8A8A8")
       .nodeThreeObject(node => {
         // use a sphere as a drag handle
-        const obj = new THREE.Mesh(
-          new THREE.SphereGeometry(10),
-          new THREE.MeshBasicMaterial({
+        const obj = new Mesh(
+          new SphereGeometry(10),
+          new MeshBasicMaterial({
             depthWrite: false,
             transparent: true,
             opacity: 0
@@ -36,14 +36,14 @@
       .onNodeHover(node => (target.style.cursor = node ? "pointer" : null))
       .onNodeClick(node => {
         // Aim at node from outside it
-        const distance = 40;
+        const distance = 200;
         const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
 
         graph.cameraPosition(
           {
             x: node.x * distRatio,
             y: node.y * distRatio,
-            z: node.z * distRatio * 4
+            z: node.z * distRatio
           }, // new position
           node, // lookAt ({ x, y, z })
           3000 // ms transition duration
