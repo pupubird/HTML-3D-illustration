@@ -61,7 +61,7 @@
         })
         .onEngineTick(() => {
           counter += 1;
-          if (counter >= 200) {
+          if (counter >= 80) {
             dispatch("unloading");
             loaded = true;
           }

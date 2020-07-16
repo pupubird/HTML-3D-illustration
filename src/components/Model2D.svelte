@@ -7,8 +7,8 @@
   let chart;
   const init = () => {
     //Width and height
-    let chart_width = window.innerWidth;
-    let chart_height = window.innerHeight;
+    let chart_width = window.innerWidth * 1.8;
+    let chart_height = window.innerHeight * 1.8;
     let colors = d3.scaleOrdinal(d3.schemeCategory10);
 
     // Force Layout
